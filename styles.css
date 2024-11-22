@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    background: #f3f4f9;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    animation: drop-in 1s ease-in-out;
+}
+
+.header h1 {
+    animation: pulse 2s infinite alternate;
+}
+
+/* Section Animations */
+@keyframes drop-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-on-scroll {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
+/* Skills Section */
+.skills .progress-bar {
+    background: #27ae60;
+    height: 10px;
+    border-radius: 5px;
+    animation: grow-bar 1.5s ease-out;
+}
+
+@keyframes grow-bar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Achievements */
+.achievements ul li {
+    animation: zoom-in 1s ease;
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    animation: slide-up 1s ease-in-out;
+}
